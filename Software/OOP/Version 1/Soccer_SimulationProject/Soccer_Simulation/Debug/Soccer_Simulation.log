@@ -1,0 +1,29 @@
+﻿Build started 15/03/2018 16:06:04.
+     1>Project "C:\Users\Queiroz\Desktop\VisualStudio\C++ Projects\Soccer\Soccer_SimulationProject\Soccer_Simulation\Soccer_Simulation.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Queiroz\Desktop\VisualStudio\C++ Projects\Soccer\Soccer_SimulationProject\Soccer_Simulation\remoteApi" /I./remoteApi /I./include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D NON_MATLAB_PARSING /D _CRT_SECURE_NO_WARNINGS /D MAX_EXT_API_CONNECTIONS=255 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt MyClasses\Solenoid.cpp
+         Solenoid.cpp
+     1>c:\users\queiroz\desktop\visualstudio\c++ projects\soccer\soccer_simulationproject\soccer_simulation\myclasses\solenoid.cpp(47): warning C4305: 'argument' : truncation from 'double' to 'simxFloat'
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Queiroz\Desktop\VisualStudio\C++ Projects\Soccer\Soccer_SimulationProject\Debug\Soccer_Simulation.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Queiroz\Desktop\VisualStudio\C++ Projects\Soccer\Soccer_SimulationProject\Debug\Soccer_Simulation.pdb" /SUBSYSTEM:CONSOLE /STACK:"4194304" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Queiroz\Desktop\VisualStudio\C++ Projects\Soccer\Soccer_SimulationProject\Debug\Soccer_Simulation.lib" /MACHINE:X86 Debug\BitMatrix.obj
+         Debug\BPSensor.obj
+         Debug\Camera.obj
+         Debug\Compass.obj
+         Debug\DataBase.obj
+         Debug\Dribble.obj
+         Debug\FieldDraw.obj
+         Debug\FieldMatrix.obj
+         Debug\Motors.obj
+         Debug\Solenoid.obj
+         Debug\TimeThread.obj
+         Debug\Ultrasonic.obj
+         Debug\extApi.obj
+         Debug\extApiPlatform.obj
+         Debug\Soccer_Simulation.obj
+         Debug\stdafx.obj
+         Soccer_Simulation.vcxproj -> C:\Users\Queiroz\Desktop\VisualStudio\C++ Projects\Soccer\Soccer_SimulationProject\Debug\Soccer_Simulation.exe
+     1>Done Building Project "C:\Users\Queiroz\Desktop\VisualStudio\C++ Projects\Soccer\Soccer_SimulationProject\Soccer_Simulation\Soccer_Simulation.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.53
