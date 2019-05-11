@@ -69,7 +69,8 @@ In the bottom layer, the support base of the robot, are positioned the 4 motors 
 <p align="center">
  <img src="https://github.com/Brenocq/SoccerOpenRCJ/blob/CreatingReadMe/Images/CamadaInferior.PNG" height="200">
 </p>
-_All the 3D parts and 3D assemblies used in this robot can be found [here](https://drive.google.com/drive/folders/1cfEVvXL5qXXQsfxR3kr_MtsyGKkBlNN_)._
+
+*All the 3D parts and 3D assemblies used in this robot can be found [here](https://drive.google.com/drive/folders/1cfEVvXL5qXXQsfxR3kr_MtsyGKkBlNN_).*
 
 ### Human-Robot Interface
 The human-robot interface is performed through a 3.2 "Nextion Display. The screens were developed through the manufacturer's program, while the images used on the screens were created by the team through the Illustrator program. Through the display it is possible to test the motors, sensors, connect the robots via bluetooth and start/pause the game program.
