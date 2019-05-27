@@ -1,0 +1,207 @@
+﻿Build started 12/03/2019 12:58:12.
+     1>Project "C:\Users\breno\OneDrive\Área de Trabalho\Visual Studio\C++ Projects\Soccer_v2\Soccer_Simulation_v2\Soccer_Simulation_v2\Soccer_Simulation_v2.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Program Files\V-REP3\V-REP_PRO_EDU\programming\remoteApi" /I"C:\Program Files\V-REP3\V-REP_PRO_EDU\programming\include" /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D NON_MATLAB_PARSING /D _CRT_SECURE_NO_WARNINGS /D MAX_EXT_API_CONNECTIONS=255 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt Classes\Robot.cpp
+         Robot.cpp
+     1>Classes\Robot.cpp(341): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(343): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(345): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(346): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(354): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(370): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(373): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(380): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>Classes\Robot.cpp(387): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(511): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(513): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(514): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(592): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(593): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(597): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(630): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(660): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(716): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(729): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(731): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(745): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(746): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(750): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(751): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(755): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(756): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(760): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(761): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(768): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(769): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(773): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(774): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(778): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(779): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(783): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(784): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(808): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(809): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(811): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(812): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(839): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(840): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(842): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(843): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(863): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(864): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(866): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(683): warning C4101: 'RealNumberMotor' : unreferenced local variable
+     1>Classes\Robot.cpp(878): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(886): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>Classes\Robot.cpp(887): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(888): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>Classes\Robot.cpp(905): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>Classes\Robot.cpp(964): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+     1>Classes\Robot.cpp(983): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(1003): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(1029): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1031): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1034): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1036): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1040): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1044): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1082): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1088): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1125): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>Classes\Robot.cpp(1126): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>Classes\Robot.cpp(1128): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1130): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1188): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1190): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(1191): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(1192): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(1207): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(1208): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(1218): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(1219): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(1291): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>Classes\Robot.cpp(1296): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>Classes\Robot.cpp(1301): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>Classes\Robot.cpp(1306): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>Classes\Robot.cpp(1316): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(1374): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(1379): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(1389): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(1405): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(1312): warning C4101: 'realAngle180' : unreferenced local variable
+     1>Classes\Robot.cpp(1429): warning C4800: 'char' : forcing value to bool 'true' or 'false' (performance warning)
+     1>Classes\Robot.cpp(1480): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>Classes\Robot.cpp(1510): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(1514): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1617): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(1590): warning C4101: 'relativeNumberSonar' : unreferenced local variable
+     1>Classes\Robot.cpp(1649): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1651): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1653): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1655): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1658): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1660): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1662): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1664): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1667): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1669): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1671): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1673): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1676): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1678): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1680): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1682): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1688): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1690): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1692): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1694): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1697): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1699): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1701): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1703): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1706): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1708): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1710): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1712): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1715): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1717): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1719): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1721): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1737): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1738): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1741): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1742): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(1809): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>Classes\Robot.cpp(1822): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>Classes\Robot.cpp(1900): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>Classes\Robot.cpp(2081): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>Classes\Robot.cpp(2116): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>Classes\Robot.cpp(2124): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>Classes\Robot.cpp(2135): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>Classes\Robot.cpp(2188): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(2191): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(2195): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(2293): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>Classes\Robot.cpp(2299): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>Classes\Robot.cpp(2300): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>Classes\Robot.cpp(2326): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(2349): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(2358): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>Classes\Robot.cpp(2359): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(2360): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(2366): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(2367): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(2368): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(2407): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>Classes\Robot.cpp(2526): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(2532): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(2533): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(2559): warning C4101: 'firstNumber180' : unreferenced local variable
+     1>Classes\Robot.cpp(2560): warning C4101: 'secondNumber180' : unreferenced local variable
+     1>Classes\Robot.cpp(2584): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(2610): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(2612): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(2622): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+     1>Classes\Robot.cpp(2626): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(2627): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(2628): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(2663): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>Classes\Robot.cpp(2665): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>Classes\Robot.cpp(2665): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(2665): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>Classes\Robot.cpp(2666): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\breno\onedrive\área de trabalho\visual studio\c++ projects\soccer_v2\soccer_simulation_v2\soccer_simulation_v2\classes\robot.cpp(1230): warning C4715: 'Robot::generatePathArcThreePoints' : not all control paths return a value
+     1>c:\users\breno\onedrive\área de trabalho\visual studio\c++ projects\soccer_v2\soccer_simulation_v2\soccer_simulation_v2\classes\robot.cpp(2605): warning C4715: 'Robot::isAngleTimeClock' : not all control paths return a value
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\breno\OneDrive\Área de Trabalho\Visual Studio\C++ Projects\Soccer_v2\Soccer_Simulation_v2\x64\Debug\Soccer_Simulation_v2.exe" /INCREMENTAL /NOLOGO opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\breno\OneDrive\Área de Trabalho\Visual Studio\C++ Projects\Soccer_v2\Soccer_Simulation_v2\x64\Debug\Soccer_Simulation_v2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\breno\OneDrive\Área de Trabalho\Visual Studio\C++ Projects\Soccer_v2\Soccer_Simulation_v2\x64\Debug\Soccer_Simulation_v2.lib" /MACHINE:X64 x64\Debug\Actuator.obj
+         x64\Debug\BitMatrix.obj
+         x64\Debug\Camera.obj
+         x64\Debug\Communication.obj
+         x64\Debug\Compass.obj
+         x64\Debug\Display.obj
+         x64\Debug\ExternalCommunication.obj
+         x64\Debug\Field.obj
+         x64\Debug\FieldDraw.obj
+         x64\Debug\FieldMatrix.obj
+         x64\Debug\Game.obj
+         x64\Debug\InternalCommunication.obj
+         x64\Debug\LightSensor.obj
+         x64\Debug\Motor.obj
+         x64\Debug\NeuralNetwork.obj
+         x64\Debug\Robot.obj
+         x64\Debug\Sensor.obj
+         x64\Debug\Servo.obj
+         x64\Debug\Solenoid.obj
+         x64\Debug\Strategy.obj
+         x64\Debug\TimeThread.obj
+         x64\Debug\Ultrasonic.obj
+         x64\Debug\extApi.obj
+         x64\Debug\extApiPlatform.obj
+         x64\Debug\Soccer_Simulation_v2.obj
+         x64\Debug\stdafx.obj
+         Soccer_Simulation_v2.vcxproj -> C:\Users\breno\OneDrive\Área de Trabalho\Visual Studio\C++ Projects\Soccer_v2\Soccer_Simulation_v2\x64\Debug\Soccer_Simulation_v2.exe
+     1>Done Building Project "C:\Users\breno\OneDrive\Área de Trabalho\Visual Studio\C++ Projects\Soccer_v2\Soccer_Simulation_v2\Soccer_Simulation_v2\Soccer_Simulation_v2.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:07.83
