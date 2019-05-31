@@ -14,9 +14,9 @@ By: Breno Cunha Queiroz
   </p>
 
 ### Programming
-  The code was made in C++ with OOP (Object Oriented Programming). [Here](https://drive.google.com/drive/folders/1z5zd7pGjOc16Fh2591LWAGiw5lRMDPFv) there is a PDF file with the UML diagram that describes the correlations between the objects. All the libraries ware made thinking in a library that could be used to both the physical and simulated robot. For each library, different parts of the code are executed if an Arduino IDE is detected or not. If the Arduino IDE was detected, the code for the physical robot is executed, otherwise, the code for the simulated robot is executed.
+  The code was made in C++ with OOP (Object Oriented Programming). [Here](https://github.com/Brenocq/SoccerOpenRCJ/tree/master/Software) there is a PDF file with the UML diagram that describes the correlations between the objects. All the libraries ware made thinking in a library that could be used to both the physical and simulated robot. For each library, different parts of the code are executed if an Arduino IDE is detected or not. If the Arduino IDE was detected, the code for the physical robot is executed, otherwise, the code for the simulated robot is executed.
   
-_All the codes, libraries, simulation files and UML files can be found [here](https://drive.google.com/drive/u/0/folders/1z5zd7pGjOc16Fh2591LWAGiw5lRMDPFv)._
+_All the codes, libraries, simulation files and UML files can be found [here](https://github.com/Brenocq/SoccerOpenRCJ/tree/master/Software)._
 
 ### Simulation
   The V-Rep program was used to simulate the football game environment because of its compatibility with the C++ language, which allows the same programming logic to be used in both the simulation and the physical robot. The physical robot works through the Arduino IDE. In V-REP, the physical engine ODE was used during all the tests to simulate the behavior of the real physics. However, it was necessary to make form adaptations to the sensors and controllers available in the simulated environment to represent more precisely the same ones of the physical robot. Moreover, it was necessary to decrease the resolution of the robot structure to avoid slowness due to the high amount of polygons.
