@@ -42,9 +42,6 @@
     <ClInclude Include="Classes\Display.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Classes\ExternalCommunication.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Classes\Field.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -90,19 +87,25 @@
     <ClInclude Include="Classes\Ultrasonic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="remoteApi\extApi.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="remoteApi\extApiInternal.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="remoteApi\extApiPlatform.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Classes\NeuralNetwork.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Classes\Listnode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CopelliaSim\extApi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CopelliaSim\extApiPlatform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CopelliaSim\simConst.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CopelliaSim\extApiInternal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CopelliaSim\shared_memory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -176,13 +179,13 @@
     <ClCompile Include="Classes\Ultrasonic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="remoteApi\extApi.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="remoteApi\extApiPlatform.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Classes\NeuralNetwork.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CopelliaSim\extApi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CopelliaSim\extApiPlatform.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -21,7 +21,7 @@
 #include <string.h>
 
 extern "C" {
-#include "extApi.h"
+#include "../CopelliaSim/extApi.h"
 }
 #endif
 

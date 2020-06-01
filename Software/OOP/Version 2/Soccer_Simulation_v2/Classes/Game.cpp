@@ -16,7 +16,7 @@ using std::endl;
 using std::setprecision;
 
 extern "C" {
-#include "extApi.h"
+#include "../CopelliaSim/extApi.h"
 }
 
 Game::Game(Robot *_robot0, Robot *_robot1, Robot *_robot2, Robot *_robot3)

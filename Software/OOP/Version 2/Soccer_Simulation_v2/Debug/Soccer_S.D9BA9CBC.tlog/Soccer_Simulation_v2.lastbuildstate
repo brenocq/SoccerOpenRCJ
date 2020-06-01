@@ -1,2 +1,2 @@
-#TargetFrameworkVersion=v4.0:PlatformToolSet=v120:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit
-Debug|Win32|C:\Users\Queiroz\Desktop\VisualStudio\C++ Projects\Soccer_v2\Soccer_Simulation_v2\|
+PlatformToolSet=v142:VCToolArchitecture=Native32Bit:VCToolsVersion=14.26.28801:TargetPlatformVersion=10.0.19041.0:
+Debug|Win32|C:\Users\breno\Documents\SoccerOpenRCJ\Software\OOP\Version 2\Soccer_Simulation_v2\|

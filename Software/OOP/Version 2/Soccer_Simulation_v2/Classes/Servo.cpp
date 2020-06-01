@@ -12,7 +12,7 @@
 
 #if !defined(ARDUINO)
 extern "C" {
-#include "extApi.h"
+#include "../CopelliaSim/extApi.h"
 }
 #endif
 

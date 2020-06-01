@@ -8,6 +8,7 @@
 #define DEBUG 0
 #define DEBUGMOV 0//(debug simpleMove)
 #define DEBUGROBOTS 1//(debug robots)
+#define PLAY 0
 
 #include "Robot.h"
 
@@ -33,7 +34,7 @@ using std::setprecision;
 using std::string;
 
 extern "C" {
-#include "extApi.h"
+#include "../CopelliaSim/extApi.h"
 }
 #endif
 
@@ -188,8 +189,8 @@ void Robot::execute(){
 	drawSonarPoints();//            Update points in the field matrix
 	//processMatrix();//            Process field matrix (clean, adjust)
 
-	//updateRobotX();
-	//updateRobotY();
+	updateRobotX();
+	updateRobotY();
 
 	//cout << "GoalProb:" << goalProbability() << " ratio:" << realGoalHeight / goalHeightCam << " distNear:" << nearestAdversary;
 
@@ -200,8 +201,8 @@ void Robot::execute(){
 	}
 
 	//move circle
-	/*maxPower = 200;
-
+	maxPower = 100;
+	/*
 	frontAngleMov >= 360 ? frontAngleMov -= 360 : (frontAngleMov < 0 ? frontAngleMov += 360 : frontAngleMov);
 	frontMov >= 360 ? frontMov -= 360 : (frontMov < 0 ? frontMov += 360 : frontMov);
 
@@ -216,108 +217,112 @@ void Robot::execute(){
 		frontMov = frontMov + 1 * (1 + lostCycles);
 	}*/
 	//deviation
-	/* ABLE THIS TO TEST OBSTACLE DEVIATION
+	// ABLE THIS TO TEST OBSTACLE DEVIATION
 	float goalAngle = angleTwoPoints(robotX, robotY, 60, 120);
 	if (robotX + robotY != 0){
-		circleAvoidObstacle(pathRobot, robotX, robotY, 60, 120, 17, goalAngle);
+		//circleAvoidObstacle(pathRobot, robotX, robotY, 60, 180, 17, goalAngle);
+		generatePathLine(pathRobot, robotX, robotY, 60, 180, 5);
 		vectorMove(pathRobot, 0);
-	}*/
-
-	cout << "Estimated ball position:	(" << std::setw(6) << std::left << ballX << "," << std::setw(6) << ballY << ")" << endl;
-
-	if (myPassState != 0 || friendPassState != 0){
-		ballPass();
-		readBluetooth();//read and update values
-		writeBluetooth();
-		if (myPassState == 3 && friendPassState == 3){
-			myPassState = 0;
-			friendPassState = 0;
-			if (robotMode == ATTACKER)
-				robotMode = DEFENDER;
-			else
-				robotMode = ATTACKER;
-		}
 	}
-	else if (robotMode == ATTACKER){
-		cout << "robot " << robotNumber << " - attacker";
-		if (DEBUG && robotNumber<DEBUGROBOTS)
-		cout << "Attacker	FrontAngle:" << frontAngle << endl;
-		if (isBallKnowed || robotWithBall){//------------------------------------------------------the team know the ball
-			if (teamWithBall){//--------------------------------------------------team with the ball
-				if (robotWithBall){//---------------------------------------------this robot is with the ball
-					if (DEBUG && robotNumber<DEBUGROBOTS)
-					cout << "Robot with ball, try goal" << endl;
-					//go to kick area and calcule the probability to do goal
-				//generatePathArcThreePoints(pathRobot, 40, 163, 91, 130, 140, 163, 10);
-					//generatePathArcThreePoints(pathRobot, 140, 163, 91, 130, 40, 163, 10);
-					// kickToGoal();
-					if (pathRobot.size() > 1){
-						if (DEBUG && robotNumber<DEBUGROBOTS)
-							cout << "Path with something" << endl;
-						//vectorMove(pathRobot, frontAngle);
-					}
-					else{
-						if (DEBUG && robotNumber<DEBUGROBOTS)
-							cout << "Path empty"<<endl;
 
-					}
-					//simpleMove();
-				}
+	//cout << "Estimated ball position:	(" << std::setw(6) << std::left << ballX << "," << std::setw(6) << ballY << ")" << endl;
+
+	if (PLAY) {
+		if (myPassState != 0 || friendPassState != 0) {
+			ballPass();
+			readBluetooth();//read and update values
+			writeBluetooth();
+			if (myPassState == 3 && friendPassState == 3) {
+				myPassState = 0;
+				friendPassState = 0;
+				if (robotMode == ATTACKER)
+					robotMode = DEFENDER;
 				else
-				{
-					//ask pass or trade mode
-					//catchTheBall();
-				}
-			}//-------------------------------------------------------------------team without ball
-			else{//---------------------------------------------------------------know the ball but no one is with the ball
-				//go to ball (avoid objects) and catch the ball
-				if (DEBUG && robotNumber<DEBUGROBOTS)
-				cout << "Ball Knowed, try to catch" << endl;
-				//generateBallPath(pathRobot);
-				//vectorMove(pathRobot, frontAngle);
+					robotMode = ATTACKER;
 			}
-		}//-----------------------------------------------------------------------don't know the ball
-		else{
-			if (DEBUG && robotNumber<DEBUGROBOTS)
-			cout << "Ball Unknowed" << endl;
-			//go to defense
-			//goToPosition(90,80,frontAngle);
-			//goToDefense();
 		}
-	}
-	else if (robotMode == DEFENDER){
-		cout << "robot " << robotNumber << "!";
-		if (DEBUG && robotNumber<DEBUGROBOTS)
-		cout << "Defender	FrontAngle:" <<frontAngle<< endl;
-		if (isBallKnowed){//------------------------------------------------------the team know the ball
-			if (teamWithBall){//--------------------------------------------------team with the ball
-				if (robotWithBall){//---------------------------------------------this robot is with the ball
-					if (DEBUG && robotNumber<DEBUGROBOTS)
-					cout << "Robot with ball, pass" << endl;
-					
-					//robotMode = ATTACKER;
-					//kickToGoal();
-					//simpleMove();
+		else if (robotMode == ATTACKER) {
+			cout << "robot " << robotNumber << " - attacker";
+			if (DEBUG && robotNumber < DEBUGROBOTS)
+				cout << "Attacker	FrontAngle:" << frontAngle << endl;
+			if (isBallKnowed || robotWithBall) {//------------------------------------------------------the team know the ball
+				if (teamWithBall) {//--------------------------------------------------team with the ball
+					if (robotWithBall) {//---------------------------------------------this robot is with the ball
+						if (DEBUG && robotNumber < DEBUGROBOTS)
+							cout << "Robot with ball, try goal" << endl;
+						//go to kick area and calcule the probability to do goal
+						generatePathArcThreePoints(pathRobot, 40, 163, 91, 130, 140, 163, 10);
+						generatePathArcThreePoints(pathRobot, 140, 163, 91, 130, 40, 163, 10);
+						kickToGoal();
+						if (pathRobot.size() > 1) {
+							if (DEBUG && robotNumber < DEBUGROBOTS)
+								cout << "Path with something" << endl;
+							//vectorMove(pathRobot, frontAngle);
+						}
+						else {
+							if (DEBUG && robotNumber < DEBUGROBOTS)
+								cout << "Path empty" << endl;
+
+						}
+						simpleMove();
+					}
+					else
+					{
+						//ask pass or trade mode
+						catchTheBall();
+					}
+				}//-------------------------------------------------------------------team without ball
+				else {//---------------------------------------------------------------know the ball but no one is with the ball
+					//go to ball (avoid objects) and catch the ball
+					if (DEBUG && robotNumber < DEBUGROBOTS)
+						cout << "Ball Knowed, try to catch" << endl;
+					generateBallPath(pathRobot);
+					vectorMove(pathRobot, frontAngle);
 				}
-				else
-				{
+			}//-----------------------------------------------------------------------don't know the ball
+			else {
+				if (DEBUG && robotNumber < DEBUGROBOTS)
+					cout << "Ball Unknowed" << endl;
+				//go to defense
+				goToPosition(90, 80, frontAngle);
+				goToDefense();
+			}
+		}
+		else if (robotMode == DEFENDER) {
+			cout << "robot " << robotNumber << "!";
+			if (DEBUG && robotNumber < DEBUGROBOTS)
+				cout << "Defender	FrontAngle:" << frontAngle << endl;
+			if (isBallKnowed) {//------------------------------------------------------the team know the ball
+				if (teamWithBall) {//--------------------------------------------------team with the ball
+					if (robotWithBall) {//---------------------------------------------this robot is with the ball
+						if (DEBUG && robotNumber < DEBUGROBOTS)
+							cout << "Robot with ball, pass" << endl;
+
+						robotMode = ATTACKER;
+						kickToGoal();
+						simpleMove();
+					}
+					else
+					{
+						blockGoal();
+					}
+				}
+				else {
+					if (DEBUG && robotNumber < DEBUGROBOTS)
+						cout << "Ball Knowed, defense goal-FA: " << frontAngle << endl;
 					blockGoal();
 				}
 			}
-			else{
-				if (DEBUG && robotNumber<DEBUGROBOTS)
-				cout << "Ball Knowed, defense goal-FA: " << frontAngle << endl;
+			else {
+				if (DEBUG && robotNumber < DEBUGROBOTS)
+					cout << "Ball Unknowed, defense goal-FA: " << frontAngle << endl;
 				blockGoal();
 			}
+
+			simpleMove(frontAngle);
 		}
-		else{
-			if (DEBUG && robotNumber<DEBUGROBOTS)
-			cout << "Ball Unknowed, defense goal-FA: "<<frontAngle << endl;
-			blockGoal();
-		}
-		
-		//simpleMove(frontAngle);
 	}
+	
 	if (DEBUG && robotNumber<DEBUGROBOTS){
 		isBallKnowed == true ? printf("\nBall: (%d,%d)\n", ballX, ballY) : printf("don't know ball\n");
 		cout << "RobotWithBall: " << robotWithBall << endl;

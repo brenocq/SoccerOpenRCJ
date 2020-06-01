@@ -10,7 +10,7 @@
 #include "Classes/NeuralNetwork.h"
 #include "Classes/ExternalCommunication.h"
 extern "C" {
-#include "remoteAPI/extApi.h"
+#include "CopelliaSim/extApi.h"
 }
 using namespace std;
 
@@ -107,25 +107,9 @@ Game *gameControl();
 //----------------------------------------------------------------VOIDS---------------------------------------------------------------
 //----- INITIALIZATION -----//
 void initializateObjects(){
-	
 	//----- SIMULATION -----//
 	ID = Initial();
 	cout << fixed << setprecision(2);//configure float output as 0.00
-	//----- ROBOTS -----//
-
-	//----- FIELD -----//
-	
-	//----- GAMECONTROL -----//
-	
-	//robot0.initializeSimulation(ID);
-	//robot1.initializeSimulation(ID);
-	//robot2.initializeSimulation(ID);
-	//robot3.initializeSimulation(ID);
-	//----- FIELD -----//
-	
-	
-	//----- GAMECONTROL -----//
-	
 
 	int check = fStart_Stop(ID);
 }
@@ -174,8 +158,8 @@ int main(int argc, char* argv[])
 	field->setSeePath(true, 1, GREEN);
 	field->setSeeAdversaries(false, 1, MAGENTA);
 
-	field->setSeeRobot(true, 2, YELLOW);
-	field->setSeeSonarLines(true, 2, YELLOW);
+	field->setSeeRobot(true, 2, ORANGE);
+	field->setSeeSonarLines(true, 2, ORANGE);
 	field->setSeeSonarPoints(true, 2, ORANGE);
 	field->setSeeReading(true, 2, ORANGE);
 	field->setSeeBall(true, 2, ORANGE);
@@ -199,7 +183,7 @@ int main(int argc, char* argv[])
 			gameControl->execute();//                robot judge / ball judge
 			//-----Robots-----//
 			robot0->execute();
-			//robot1->execute();
+			robot1->execute();
 			//robot2->execute();
 
 
@@ -214,7 +198,7 @@ int main(int argc, char* argv[])
 
 				}
 		}
-			extApi_sleepMs(5);
+		extApi_sleepMs(5);
 	}
 	cout << "Simulation stopped";
 	return 0;

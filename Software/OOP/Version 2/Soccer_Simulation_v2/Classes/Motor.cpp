@@ -24,7 +24,7 @@ using std::endl;
 using std::setprecision;
 
 extern "C" {
-#include "extApi.h"
+#include "../CopelliaSim/extApi.h"
 }
 #endif
 
