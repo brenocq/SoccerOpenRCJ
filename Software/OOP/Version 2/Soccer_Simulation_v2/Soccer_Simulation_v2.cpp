@@ -153,10 +153,10 @@ int main(int argc, char* argv[])
 	field->setSeeRobot(true, 1, BLUE);
 	field->setSeeSonarLines(true, 1, BLUE);
 	field->setSeeSonarPoints(true, 1, BLUE);
-	field->setSeeReading(true, 1, RED);
-	field->setSeeBall(true, 1, MAGENTA);
-	field->setSeePath(true, 1, GREEN);
-	field->setSeeAdversaries(false, 1, MAGENTA);
+	field->setSeeReading(true, 1, BLUE);
+	field->setSeeBall(true, 1, BLUE);
+	field->setSeePath(true, 1, BLUE);
+	field->setSeeAdversaries(false, 1, BLUE);
 
 	field->setSeeRobot(true, 2, ORANGE);
 	field->setSeeSonarLines(true, 2, ORANGE);

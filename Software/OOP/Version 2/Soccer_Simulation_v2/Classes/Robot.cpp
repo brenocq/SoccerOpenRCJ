@@ -5,10 +5,11 @@
 //  Original author: Breno Queiroz
 ///////////////////////////////////////////////////////////
 
-#define DEBUG 0
+#define DEBUG 1
 #define DEBUGMOV 0//(debug simpleMove)
 #define DEBUGROBOTS 1//(debug robots)
-#define PLAY 0
+#define TEST_PATH 0
+#define PLAY 1
 
 #include "Robot.h"
 
@@ -195,10 +196,10 @@ void Robot::execute(){
 	//cout << "GoalProb:" << goalProbability() << " ratio:" << realGoalHeight / goalHeightCam << " distNear:" << nearestAdversary;
 
 	//---------- GAME ----------//
-	if (robotNumber != 1){
+	/*if (robotNumber != 1){
 		readBluetooth();//read and update values
 		writeBluetooth();
-	}
+	}*/
 
 	//move circle
 	maxPower = 100;
@@ -218,14 +219,17 @@ void Robot::execute(){
 	}*/
 	//deviation
 	// ABLE THIS TO TEST OBSTACLE DEVIATION
-	float goalAngle = angleTwoPoints(robotX, robotY, 60, 120);
-	if (robotX + robotY != 0){
-		//circleAvoidObstacle(pathRobot, robotX, robotY, 60, 180, 17, goalAngle);
-		generatePathLine(pathRobot, robotX, robotY, 60, 180, 5);
-		vectorMove(pathRobot, 0);
-	}
+	
 
 	//cout << "Estimated ball position:	(" << std::setw(6) << std::left << ballX << "," << std::setw(6) << ballY << ")" << endl;
+	if (TEST_PATH) {
+		float goalAngle = angleTwoPoints(robotX, robotY, 60, 120);
+		if (robotX + robotY != 0) {
+			circleAvoidObstacle(pathRobot, robotX, robotY, 60, 180, 17, goalAngle);
+			//generatePathLine(pathRobot, robotX, robotY, 60, 180, 5);
+			vectorMove(pathRobot, 0);
+		}
+	}
 
 	if (PLAY) {
 		if (myPassState != 0 || friendPassState != 0) {
@@ -248,13 +252,13 @@ void Robot::execute(){
 			if (isBallKnowed || robotWithBall) {//------------------------------------------------------the team know the ball
 				if (teamWithBall) {//--------------------------------------------------team with the ball
 					if (robotWithBall) {//---------------------------------------------this robot is with the ball
-						if (DEBUG && robotNumber < DEBUGROBOTS)
-							cout << "Robot with ball, try goal" << endl;
+						
 						//go to kick area and calcule the probability to do goal
-						generatePathArcThreePoints(pathRobot, 40, 163, 91, 130, 140, 163, 10);
-						generatePathArcThreePoints(pathRobot, 140, 163, 91, 130, 40, 163, 10);
-						kickToGoal();
-						if (pathRobot.size() > 1) {
+						//generatePathArcThreePoints(pathRobot, 40, 163, 91, 130, 140, 163, 10);
+						//generatePathArcThreePoints(pathRobot, 140, 163, 91, 130, 40, 163, 10);
+						//kickToGoal();
+						
+						/*if (pathRobot.size() > 1) {
 							if (DEBUG && robotNumber < DEBUGROBOTS)
 								cout << "Path with something" << endl;
 							//vectorMove(pathRobot, frontAngle);
@@ -262,13 +266,33 @@ void Robot::execute(){
 						else {
 							if (DEBUG && robotNumber < DEBUGROBOTS)
 								cout << "Path empty" << endl;
+							
 
+						}*/
+
+						if (distanceTwoPoints(robotX, robotY, 140, 163) < 20)
+						{
+							if (DEBUG && robotNumber < DEBUGROBOTS)
+								cout << "Robot with ball, kick" << endl;
+							//kickToGoal();
+							kick();
+							//simpleMove();
 						}
-						simpleMove();
+						else {
+							if (DEBUG && robotNumber < DEBUGROBOTS)
+								cout << "Robot with ball, go to pos to kock" << endl;
+							generatePathLine(pathRobot, robotX, robotY, 140, 163, 5);
+							float goalAngle = angleTwoPoints(robotX, robotY, 90, 213);
+							vectorMove(pathRobot, goalAngle);
+						}
+						//simpleMove();
+						
 					}
 					else
 					{
-						//ask pass or trade mode
+						if (DEBUG && robotNumber < DEBUGROBOTS)
+							cout << "Ask for ball or change mode" << endl;
+						//ask pass or change mode
 						catchTheBall();
 					}
 				}//-------------------------------------------------------------------team without ball
@@ -284,8 +308,9 @@ void Robot::execute(){
 				if (DEBUG && robotNumber < DEBUGROBOTS)
 					cout << "Ball Unknowed" << endl;
 				//go to defense
-				goToPosition(90, 80, frontAngle);
-				goToDefense();
+				//goToPosition(90, 80, frontAngle);
+				//goToDefense();
+				robotMode = DEFENDER;
 			}
 		}
 		else if (robotMode == DEFENDER) {
@@ -299,8 +324,6 @@ void Robot::execute(){
 							cout << "Robot with ball, pass" << endl;
 
 						robotMode = ATTACKER;
-						kickToGoal();
-						simpleMove();
 					}
 					else
 					{
@@ -310,16 +333,15 @@ void Robot::execute(){
 				else {
 					if (DEBUG && robotNumber < DEBUGROBOTS)
 						cout << "Ball Knowed, defense goal-FA: " << frontAngle << endl;
-					blockGoal();
+					//blockGoal();
+					catchTheBall();
 				}
 			}
 			else {
 				if (DEBUG && robotNumber < DEBUGROBOTS)
 					cout << "Ball Unknowed, defense goal-FA: " << frontAngle << endl;
-				blockGoal();
+				goToPosition(90, 80, frontAngle);
 			}
-
-			simpleMove(frontAngle);
 		}
 	}
 	
@@ -358,6 +380,7 @@ bool Robot::catchTheBall(){
 			maxPower = 255;
 
 		goToPosition(ballX_, ballY_, angleRobotBall);
+		//circleAvoidObstacle(pathRobot, robotX, robotY, ballX_, ballY_, 10, angleRobotBall);
 		if (robotWithBall)
 			return true;
 		else
@@ -1110,18 +1133,18 @@ bool Robot::generateBallPath(vector<int>& path){
 	ballAngle = angleTwoPoints(robotX, robotY, ballX, ballY);
 
 			
-			if (distanceTwoPoints(robotX, robotY, ballX, ballY) > 50){
-				generatePathLine(path, robotX, robotY, ballX, ballY, 5);
-				if (DEBUG && robotNumber<DEBUGROBOTS)
-				cout << "GOING TO BALL" << endl;
-			}
-			else{
-				if (DEBUG && robotNumber<DEBUGROBOTS)
-				cout << "CATCH BALL" << endl;
-				catchTheBall();
-			}
-			//path.push_back(ballX);//cos*a -- a=distance from the ball equal
-			//path.push_back(ballY);//sin*a -- a=distance from the ball equals
+	if (distanceTwoPoints(robotX, robotY, ballX, ballY) > 20){
+		generatePathLine(path, robotX, robotY, ballX, ballY, 5);
+		if (DEBUG && robotNumber<DEBUGROBOTS)
+			cout << "GOING TO BALL" << endl;
+	}
+	else{
+		if (DEBUG && robotNumber<DEBUGROBOTS)
+			cout << "CATCH BALL" << endl;
+			catchTheBall();
+	}
+	//path.push_back(ballX);//cos*a -- a=distance from the ball equal
+	//path.push_back(ballY);//sin*a -- a=distance from the ball equals
 	return true;
 }	
 bool Robot::generatePathLine(vector<int>& path, int x0, int y0, int x1, int y1,int scale){

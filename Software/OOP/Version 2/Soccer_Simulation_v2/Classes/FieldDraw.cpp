@@ -21,6 +21,8 @@ using std::cin;
 using std::endl;
 #include <cstdlib>//to clear the screen
 
+#define TEST_PATH 1
+
 FieldDraw::FieldDraw(Robot *_robot1, Robot *_robot2, Robot *_robot3, Robot *_robot4)
 	:robot1(*_robot1), robot2(*_robot2), robot3(*_robot3), robot4(*_robot4),
 	robots(vector <Robot*>(5)),
@@ -256,6 +258,9 @@ void FieldDraw::print(){
 						int pathX = robots[i]->pathRobot[(p * 2) - 2];
 						int pathY = robots[i]->pathRobot[(p * 2) - 1];
 						//fillCircleWrite(widthField - 1 - pathX, lengthField - 1 - pathY, 3, seePath[i]);
+						if (TEST_PATH) {
+							circleWrite(widthField - 1 - pathX, lengthField - 1 - pathY, 17, 1, seePath[i]);
+						}
 						fillCenterSquareWrite(widthField - 1 - pathX, lengthField - 1 - pathY, 2, 2, seePath[i]);
 					}
 				}
@@ -334,7 +339,9 @@ void FieldDraw::print(){
 						int pathY = robots[i]->pathRobot[(p * 2) - 1];
 						//fillCircleWrite(pathX,pathY, 3, seePath[i]);
 						fillCenterSquareWrite(pathX, pathY, 2, 2, BLUE);
-						//circleWrite(pathX, pathY, 17, 1, seePath[i]);
+						if (TEST_PATH) {
+							circleWrite(pathX, pathY, 17, 1, seePath[i]);
+						}
 						//fillCenterSquareWrite(60, 120, 7, 7, BLUE);
 						bigLineWrite(55, 115, 65, 125, 2, BLUE);
 						bigLineWrite(55, 125, 65, 115, 2, BLUE);
